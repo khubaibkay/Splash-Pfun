@@ -1,0 +1,35 @@
+import random
+import time
+names=['Abeera Farooq Alam',
+'Alisha momin','Amal Iqbal Shaikh','Aneeq akhtar','Arisha Jamil Ahmad',
+'Burare Hassan Rawjani'
+,'Fabiha Siraj',
+'Fariha Ahmed',
+'Fariya ali',
+'Fatima Nasir Khan'
+,'Muhammad Qasim Khan'
+,'Muhammad raza'
+,'Rohit Kumar'
+,'Sana Mohsin'
+,'Sandesh Kumar'
+,'Shaheer Kamal'
+,'Syed Isaad Hasan Jafri'
+,'Zahra Azhar'
+,'Zain Ul Haq'
+,'Zainab Hussain']
+
+def makeATeam(names):
+    team=[]
+    while len(team)<4:
+        a=random.randint(0,len(names)-1)
+        team.append(names[a])
+        del names[a]
+    return team
+
+while names!=[]:
+    l=makeATeam(names)
+    for i in l:
+        print('Team member: ', i)
+        time.sleep(1)
+    print("Team: ", l,'\n')
+    time.sleep(5)
